@@ -5,19 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AWL</title>
 <style>
-  /* Modern CSS Reset & Variable Definitions */
   :root {
-    --primary-color: #A5D6A7; /* Light Green */
-    --accent-color: #2d6a4f; /* Vibrant Leaf Green */
-    --cta-color: #028090; /* High-contrast Teal/Blue */
-    --cta-hover: #02c39a; /* Bright Hover Teal */
-    --text-dark: #2d3748; /* Slate Gray for readability */
-    --text-light: #f7fafc; /* Clean Off-white */
+    --primary-color: #A5D6A7;
+    --accent-color: #2d6a4f;
+    --cta-color: #028090;
+    --cta-hover: #02c39a;
+    --text-dark: #2d3748;
+    --text-light: #f7fafc;
     --bg-gradient: linear-gradient(135deg, #A5D6A7 0%, #A5D6A7 100%);
     --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {            /* Body refers to the full screen background */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
     font-family: var(--font-main);
     background: var(--bg-gradient);
     color: var(--text-dark);
@@ -26,138 +29,120 @@
     align-items: center;
     justify-content: center;
     line-height: 1.6;
-    padding: 20px;
+    padding: 10px;
   }
-  /* Container Card Grid  -- this is the main text block area */
   .landing-card {
     background: #ffffff;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     max-width: 1100px;
     width: 100%;
-    display: grid;
     overflow: hidden;
-    transition: transform 0.3s ease;
   }
-
-/* CSS for inline header */
- .navbar {
-      width: 100%;
-      background-color: #ffffff;
-      padding: 10px 0;
-    }
-   .nav-links {
-  list-style: none;
-  margin: 0;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center; /* Pulls the items together in the center */
-  gap: 20px;               /* Manually controls the exact spacing between links */
-    }
-    .nav-links a {
-      text-decoration: none;
-      color: #333333;
-      font-family: sans-serif;
-      font-weight: 700;
-      font-size: 26px;
-      padding: 10px 15px;
-      display: block;
-      white-space: nowrap;
-    }
-    .nav-links a:hover {
-      color: #007bff;
-    }
-/*  End CSS for inline header */
-  
-/* Old Header and Footer Styles */
- header {
+  .navbar {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px 0;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+    padding: 0 10px;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: #333333;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: clamp(1rem, 2.5vw, 1.6rem);
+    padding: 5px 10px;
+    display: block;
+  }
+  .nav-links a:hover {
+    color: #007bff;
+  }
+  header {
     background: var(--primary-color);
     color: var(--text-light);
-    padding: 20px 40px;
+    padding: 20px;
     text-align: center;
   }
-
-/*  Footer styles */
   footer {
     background: #A5D6A7;
     color: var(--text-dark);
-    padding: 15px 40px;
+    padding: 15px 20px;
     text-align: center;
     font-size: 0.9rem;
   }
-
-  /* Content Pane */
   .content-section {
-    padding: 40px 60px;
+    padding: 30px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: start;
+    text-align: center;
   }
-  .tagline {
-    display: inline-block;
-    font-size: 0.85rem;
+  .tagline h2 {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
     text-transform: uppercase;
     letter-spacing: 2px;
     color: var(--accent-color);
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
-  h1 {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    line-height: 1.2;
-    margin-bottom: 24px;
+  h2 {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    color: var(--accent-color);
+    margin-bottom: 20px;
     font-weight: 800;
   }
   p {
-    font-size: 1.1rem;
+    font-size: clamp(0.95rem, 1.8vw, 1.1rem);
     color: var(--text-dark);
-    margin-bottom: 35px;
+    margin-bottom: 20px;
+    max-width: 800px;
     opacity: 0.9;
   }
-  /* Responsive Breakpoints */
-  @media (max-width: 900px) {
-    .landing-card { grid-template-columns: 1fr; }
-    .content-section { padding: 40px 30px; text-align: center; }
+  @media (max-width: 600px) {
+    body {
+      padding: 5px;
+    }
+    .content-section {
+      padding: 20px 15px;
+    }
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
   }
-
-
- </style>
+</style>
 </head>
-
 <body>
-  <main class="landing-card">
-
-<!-- Header Section -->
-<body>
-  <!-- HTML content, inside the <body> tag -->
+<main class="landing-card">
   <nav class="navbar">
     <ul class="nav-links">
-      <li><a href="#">Main</a></li>
+      <li><a href="#">Home</a></li>
       <li><a href="#">Projects</a></li>
       <li><a href="#">Research Notebook</a></li>
       <li><a href="#">Maps</a></li>
     </ul>
   </nav>
-</body>
 
-    <!-- Main Box Text Area -->
-    <section class="content-section">
-      <span class="tagline"><h2>Amherst Wildlife League</h2></span>
-      <h2>Mission - Plan - About Us</h2>
-      <p>For too long, our developmental and technological paths have inadvertently harmed our natural environment. We have, unintentionally, damaged our local ecosystems. The good news is that we can now use our same ingenuity to reverse this damage.
-<p>What we broke here we can fix here. The resources you will find here can point the way.</p>
-<p>We are volunteer professionals, devoted to the ecosystems of Amherst, working to better them.</p>
-    </section>
+  <section class="content-section">
+    <span class="tagline"><h2>Amherst Wildlife League</h2></span>
+    <h2>Mission - Plan - About Us</h2>
+    <p>For too long, our developmental and technological paths have inadvertently harmed our natural environment. We have, unintentionally, damaged our local ecosystems. The good news is that we can now use our same ingenuity to reverse this damage.</p>
+    <p>What we broke here we can fix here. The resources you will find here can point the way.</p>
+    <p>We are volunteer professionals, devoted to the ecosystems of Amherst, working to better them.</p>
+  </section>
 
-    <!-- Footer Section -->
-    <footer>
-      <p>&copy; 2026 Amherst Wildlife League. All rights reserved.</p>
-    </footer>
-  </main>
+  <footer>
+    <p>&copy; 2026 Amherst Wildlife League. All rights reserved.</p>
+  </footer>
+</main>
 </body>
 </html>
-
