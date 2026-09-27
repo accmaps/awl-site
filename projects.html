@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AWL</title>
+<style>
+  :root {
+    --primary-color: #A5D6A7;
+    --accent-color: #2d6a4f;
+    --cta-color: #028090;
+    --cta-hover: #02c39a;
+    --text-dark: #2d3748;
+    --text-light: #f7fafc;
+    --bg-gradient: linear-gradient(135deg, #A5D6A7 0%, #A5D6A7 100%);
+    --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: var(--font-main);
+    background: var(--bg-gradient);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.6;
+    padding: 10px;
+  }
+  .landing-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    max-width: 1100px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .navbar {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px 0;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+    padding: 0 10px;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: #333333;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: clamp(1rem, 2.5vw, 1.6rem);
+    padding: 5px 10px;
+    display: block;
+  }
+  .nav-links a:hover {
+    color: #007bff;
+  }
+  header {
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 20px;
+    text-align: center;
+  }
+  footer {
+    background: #A5D6A7;
+    color: var(--text-dark);
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  .content-section {
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .tagline h2 {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    font-weight: 800;
+  }
+  p {
+    font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    max-width: 800px;
+    opacity: 0.9;
+  }
+  @media (max-width: 600px) {
+    body {
+      padding: 5px;
+    }
+    .content-section {
+      padding: 20px 15px;
+    }
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+</style>
+</head>
+<body>
+<main class="landing-card">
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Research Notebook</a></li>
+      <li><a href="#">Maps</a></li>
+    </ul>
+  </nav>
+
+  <section class="content-section">
+    <span class="tagline"><h2>Amherst Wildlife League</h2></span>
+             <h1>AWL Projects</h1>
+ <b>Past (Accomplished)</b>
+<ul>
+<li>Assembled <a href="https://drive.google.com/file/d/1hy_0a8fG8ndYzcnaVJFqS3q2cpJkP1Cw/view?usp=drive_link" target="_blank">Amherst Town Wildlife Action Plan</a> from the NH WAP, UNH Extension approved</li>  
+<li><a href="https://docs.google.com/presentation/d/1Hn53fSvfMjfu6SC8rM5sq_b4Ub8I4qaMTc6twX9aH38/edit?usp=drive_link" target="_blank">Wildlife and Stream Connectivity</a> presentation to ACC. Plan approved, to DPW</li>
+<li><a href="https://docs.google.com/presentation/d/1i5vrBcqyco40D8CuARs8y24SHa64ELzi/edit?usp=drive_link&ouid=115776091131928759438&rtpof=true&sd=true" target="_blank">Amherst Vernal Pool Survey 2026</a> presented to ACC. Data conveyed to Harris Center map.</li>
+</ul>
+
+<b>Present (In Work)</b>
+<ul>
+<li><a href="https://docs.google.com/document/d/1otYbPRhwStvToSlpO7tquI_z10k7gsUH_ACAkuY0g1Y/edit?tab=t.0#heading=h.jyio5lk1yxtu" target="_blank">Brook Ecosystem Audit</a> input for presentation to SoRLAC, ACC</li>
+<li>Buck Meadow Habitats Survey to be conducted this Fall by Consulting Forester C. Koch</li>
+<li><a href="https://docs.google.com/presentation/d/1VhifapzqvL5OUzMj_QsQEZN3KJapkMdZw3GVDjZhJ4M/edit?usp=sharing" target+"_blank">Old Growth Forests</a> to be presented to ACC for future research</li>
+</ul>
+
+<b>Future (Contemplations)</b>
+<ul>
+<li>Buck Meadow Ecological Restoration, after BM Habitats Survey complete</li>
+</ul>
+          
+
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Amherst Wildlife League. All rights reserved.</p>
+  </footer>
+</main>
+</body>
+</html>
