@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWL</title>
+    <title>AWL Projects</title>
+    
+    <!-- Google Fonts Import for Inter and Syne -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --primary-color: #A5D6A7;
@@ -13,7 +19,9 @@
             --text-dark: #2d3748;
             --text-light: #f7fafc;
             --bg-gradient: linear-gradient(135deg, #A5D6A7 0%, #A5D6A7 100%);
-            --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            /* Updated font variables */
+            --font-main: 'Inter', sans-serif;
+            --font-heading: 'Syne', sans-serif;
         }
 
         * {
@@ -61,9 +69,9 @@
         .nav-links a {
             text-decoration: none;
             color: #333333;
-            font-family: sans-serif;
-            font-weight: 700;
-            font-size: clamp(1rem, 2.5vw, 1.6rem);
+            font-family: var(--font-main);
+            font-weight: 400; /* Adjusted weight to match index.html */
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
             padding: 5px 10px;
             display: block;
         }
@@ -96,7 +104,19 @@
             text-align: center;
         }
 
-        /* NEW: Wrapper to isolate the text lists and force left-alignment */
+        /* Apply Syne to all headings */
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            color: var(--accent-color);
+        }
+
+        h1 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        /* Wrapper to isolate the text lists and force left-alignment */
         .projects-container {
             text-align: left;
             width: 100%;
@@ -104,10 +124,10 @@
             margin-top: 20px;
         }
 
-        /* NEW: Styles the section headers (Past, Present, Future) */
+        /* Styles the section headers (Past, Present, Future) */
         .projects-container h3 {
             font-size: 1.1rem;
-            color: var(--accent-color);
+            font-weight: 600;
             margin-top: 15px;
             margin-bottom: 5px;
         }
@@ -116,24 +136,19 @@
             font-size: clamp(0.9rem, 2vw, 1.1rem);
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: var(--accent-color);
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: 10px;
         }
 
-        h2 {
-            font-size: clamp(1.5rem, 4vw, 2.2rem);
-            color: var(--accent-color);
-            margin-bottom: 20px;
-            font-weight: 800;
+        p, li {
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+            color: var(--text-dark);
+            opacity: 0.9;
         }
 
         p {
-            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
-            color: var(--text-dark);
             margin-bottom: 20px;
             max-width: 800px;
-            opacity: 0.9;
         }
 
         @media (max-width: 600px) {
@@ -150,7 +165,7 @@
             }
         }
 
-        /* FIXED: Completely strips margins/padding and adds bullet spacing */
+        /* Completely strips margins/padding and adds bullet spacing */
         .clean-list {
             list-style-type: none;
             padding: 0 !important;
@@ -169,6 +184,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="research.html">Research Notebook</a></li>
+                <li><a href="twap.html">TWAP</a></li>
              </ul>
         </nav>
 
@@ -178,21 +194,21 @@
 
             <!-- Isolated text block starts here -->
             <div class="projects-container">
-                <h3>Past (Accomplished)</h3>
+                <h2>Past (Accomplished)</h2>
                 <ul class="clean-list">
                     <li>Assembled <a href="https://google.com" target="_blank">Amherst Town Wildlife Action Plan</a> from the NH WAP, UNH Extension approved</li>
                     <li><a href="https://google.com" target="_blank">Wildlife and Stream Connectivity</a> presentation to ACC. Plan approved, to DPW</li>
                     <li><a href="https://google.com" target="_blank">Amherst Vernal Pool Survey 2026</a> presented to ACC. Data conveyed to Harris Center map.</li>
                 </ul>
 
-                <h3>Present (In Work)</h3>
+                <h2>Present (In Work)</h2>
                 <ul class="clean-list">
                     <li><a href="https://google.com" target="_blank">Brook Ecosystem Audit</a> input for presentation to SoRLAC, ACC</li>
                     <li>Buck Meadow Habitats Survey to be conducted this Fall by Consulting Forester C. Koch</li>
                     <li><a href="https://google.com" target="_blank">Old Growth Forests</a> to be presented to ACC for future research</li>
                 </ul>
 
-                <h3>Future (Contemplations)</h3>
+                <h2>Future (Contemplations)</h2>
                 <ul class="clean-list">
                     <li>Buck Meadow Ecological Restoration, after BM Habitats Survey complete</li>
                 </ul>

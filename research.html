@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWL - Research Notebook Portal</title>
+    <title>AWL Research Notebook</title>
+    
+    <!-- Google Fonts Import for Inter and Syne -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --primary-color: #A5D6A7;
@@ -13,7 +19,9 @@
             --text-dark: #2d3748;
             --text-light: #f7fafc;
             --bg-gradient: linear-gradient(135deg, #A5D6A7 0%, #A5D6A7 100%);
-            --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            /* Updated font variables */
+            --font-main: 'Inter', sans-serif;
+            --font-heading: 'Syne', sans-serif;
             --card-border: #e2e8f0;
         }
 
@@ -63,9 +71,9 @@
         .nav-links a {
             text-decoration: none;
             color: #333333;
-            font-family: sans-serif;
-            font-weight: 700;
-            font-size: clamp(1rem, 2.5vw, 1.6rem);
+            font-family: var(--font-main);
+            font-weight: 400; /* Adjusted weight to match index.html */
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
             padding: 5px 10px;
             display: block;
         }
@@ -86,19 +94,23 @@
             margin-bottom: 30px;
         }
 
+        /* Apply Syne to all headings */
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            color: var(--accent-color);
+        }
+
         .tagline h2 {
             font-size: clamp(0.9rem, 2vw, 1.1rem);
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: var(--accent-color);
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: 10px;
         }
 
         h1 {
             font-size: clamp(1.8rem, 4vw, 2.5rem);
-            color: var(--accent-color);
-            font-weight: 800;
+            font-weight: 500;
             margin-bottom: 15px;
         }
 
@@ -135,6 +147,7 @@
             color: #ffffff;
             text-decoration: none;
             padding: 14px 28px;
+            font-family: var(--font-main);
             font-weight: 700;
             border-radius: 30px;
             font-size: 1.1rem;
@@ -156,7 +169,7 @@
         .prompt-section-title {
             font-size: 1.2rem;
             color: var(--text-dark);
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: 15px;
             border-left: 4px solid var(--primary-color);
             padding-left: 10px;
@@ -210,6 +223,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="research.html">Research Notebook</a></li>
+                <li><a href="twap.html">TWAP</a></li>
             </ul>
         </nav>
 
@@ -252,7 +266,7 @@
                         "Summarize the culvert and stream connectivity limitations currently flagged within the active Amherst DPW planning documentation."
                     </li>
                     
- </ul>
+                </ul>
             </div>
             <!-- Isolated text block ends here -->
 
